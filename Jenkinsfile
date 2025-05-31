@@ -41,7 +41,7 @@ pipeline {
             steps {
                 echo "Deploying the app to a lightweight web server..."
                 sh '''
-                cp -r build/* /var/www/html/
+                sudo cp -r build/* /var/www/html/
                 sudo systemctl restart apache2
                 '''
             }
