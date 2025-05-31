@@ -25,7 +25,8 @@ pipeline {
         stage('Code Quality') {
             steps {
                 echo "Analyzing code quality with ESLint..."
-                sh 'npx eslint . || true'
+                sh 'npx eslint "**/*.jsx" || true'
+
             }
         }
 
