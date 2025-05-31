@@ -1,0 +1,15 @@
+{
+    "name": "simple-portfolio",
+    "version": "1.0.0",
+    "description": "A simple portfolio website",
+    "main": "index.html",
+    "scripts": {
+        "build": "echo Building project... && mkdir -p build && cp index.jsx build/",
+        "test": "echo No tests implemented.",
+        "start": "node build/index.jsx"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^8.41.0"
+    }
+}
