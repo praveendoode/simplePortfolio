@@ -50,8 +50,8 @@ pipeline {
             steps {
                 echo "Tagging the release in Git..."
                 sh '''
-                git config --global user.email "youremail@example.com"
-                git config --global user.name "Your Name"
+                git config --global user.email "praveen.kumar1195@outlook.com"
+                git config --global user.name "praveen"
                 git tag -a v1.0 -m "Initial release"
                 git push origin v1.0 || true
                 '''
