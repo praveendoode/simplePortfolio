@@ -39,9 +39,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "Deploying the app to a lightweight web server..."
+                echo "Deploying files to Apache web server..."
                 sh '''
-                sudo cp -r build/* /var/www/html/
+                sudo cp index.html /var/www/html/
+                sudo cp index.js /var/www/html/
                 sudo systemctl restart apache2
                 '''
             }
