@@ -64,8 +64,8 @@ pipeline {
             steps {
                 echo "Monitoring the website performance..."
                 sh '''
-                /usr/local/bin/monitor.sh
-                tail -n 5 /var/log/website-monitor.log
+                sudo /usr/local/bin/monitor.sh
+                sudo tail -n 5 /var/log/website-monitor.log
                 '''
             }
         }
