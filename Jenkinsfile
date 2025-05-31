@@ -60,10 +60,13 @@ pipeline {
             }
         }
 
-        stage('Monitoring') {
+         stage('Monitoring') {
             steps {
-                echo "Monitoring the app..."
-                sh 'curl -s http://localhost:$WEBSERVER_PORT || true'
+                echo "Monitoring the website performance..."
+                sh '''
+                /usr/local/bin/monitor.sh
+                tail -n 5 /var/log/website-monitor.log
+                '''
             }
         }
     }
